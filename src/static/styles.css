@@ -22,10 +22,34 @@ header {
   background-color: #1a237e;
   color: white;
   border-radius: 5px;
+  position: relative;
 }
 
 header h1 {
   margin-bottom: 10px;
+}
+
+#auth-section {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.user-icon {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.user-icon:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+#user-status {
+  font-size: 14px;
+  font-weight: bold;
 }
 
 main {
@@ -190,6 +214,65 @@ button:hover {
 
 .hidden {
   display: none;
+}
+
+/* Modal styles */
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 30px;
+  border: 1px solid #888;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+}
+
+.close-modal {
+  color: #aaa;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  color: #000;
+}
+
+.modal-content h3 {
+  margin-bottom: 20px;
+  color: #1a237e;
+}
+
+/* Info message style */
+.info-message {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffc107;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.info-message p {
+  margin: 0;
 }
 
 footer {
